@@ -4,14 +4,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import ErrorPage from "./pages/404.jsx";
-import LoginPage from "./pages/login.jsx";
-import RegisterPage from "./pages/register.jsx";
-import ProductPage from "./pages/Product.jsx";
+import LoginPage from "./pages/Auth/login.jsx";
+import RegisterPage from "./pages/Auth/register.jsx";
+import ProductPage from "./pages/product.jsx";
 import UserPage from "./pages/user.jsx";
+import Dashboard from "./pages/dashboard.jsx";
 
 const rooter = createBrowserRouter([
   {
     path: "/",
+    element: <App />,
+  },
+  {
+    path: "/login",
     element: <App />,
   },
   {
@@ -21,6 +26,7 @@ const rooter = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />,
+    title: "Login Page",
   },
   {
     path: "/register",
@@ -33,6 +39,10 @@ const rooter = createBrowserRouter([
   {
     path: "/user",
     element: <UserPage />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 

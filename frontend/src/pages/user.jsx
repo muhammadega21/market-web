@@ -1,5 +1,14 @@
+import { Helmet } from "react-helmet";
+
 function UserPage() {
-  return "User Page";
+  return (
+    <>
+      <Helmet>
+        <title>User Page</title>
+      </Helmet>
+      <h1>User Page</h1>
+    </>
+  );
 }
 
 export default UserPage;
