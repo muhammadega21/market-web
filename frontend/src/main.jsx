@@ -17,19 +17,11 @@ const rooter = createBrowserRouter([
   },
   {
     path: "/login",
-    element: (
-      <PrivateRoute isPublic={true}>
-        <LoginPage />
-      </PrivateRoute>
-    ),
+    element: <LoginPage />,
   },
   {
     path: "/register",
-    element: (
-      <PrivateRoute isPublic={true}>
-        <RegisterPage />
-      </PrivateRoute>
-    ),
+    element: <RegisterPage />,
   },
   {
     path: "/",

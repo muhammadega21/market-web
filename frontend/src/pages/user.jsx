@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
 function UserPage() {
   return (
@@ -6,7 +8,11 @@ function UserPage() {
       <Helmet>
         <title>User Page</title>
       </Helmet>
-      <h1>User Page</h1>
+      <Navbar />
+      <Sidebar />
+      <div className="w-[calc(100%-80px)] sm:w-[calc(100%-224px)] h-full ms-auto p-6">
+        <h1>User</h1>
+      </div>
     </>
   );
 }

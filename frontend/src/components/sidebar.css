@@ -1,0 +1,18 @@
+.side-link a {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+  transition: 0.1s ease-in-out;
+}
+
+.side-link a:hover,
+.side-link a.active {
+  background: rgb(10, 134, 218);
+  color: #fff;
+}
+
+.side-link a i {
+  font-size: 18px;
+  display: flex;
+}
