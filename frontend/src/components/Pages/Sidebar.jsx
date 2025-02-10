@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./sidebar.css";
 import { useEffect } from "react";
 import { useState } from "react";
-import { getUser } from "../services/user.services";
+import { getUser } from "../../services/user.services";
 
 function Sidebar() {
   const [user, setUser] = useState("");
@@ -35,7 +35,10 @@ function Sidebar() {
       <div className="side-link flex flex-col my-6">
         <Link
           to={"/dashboard"}
-          className={location.pathname == "/dashboard" && "active"}
+          className={
+            (location.pathname == "/dashboard" || location.pathname == "/") &&
+            "active"
+          }
         >
           <i className="bx bxs-dashboard"></i>
           <span>Dashboard</span>

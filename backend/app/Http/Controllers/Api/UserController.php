@@ -40,6 +40,7 @@ class UserController extends Controller
                 'message' => "List Users",
                 'data' => $users->map(function ($user) {
                     return [
+                        'id' => $user->id,
                         'name' => $user->name,
                         'email' => $user->email,
                         'role' => $user->role,
@@ -90,10 +91,10 @@ class UserController extends Controller
         $token = $request->bearerToken();
         $currentUser = PersonalAccessToken::findToken($token)->tokenable->id;
 
-        if ($user->id !== $currentUser) {
+        if (Auth()->user()->role != "admin" && $user->id !== $currentUser) {
             return response()->json([
                 'status' => Response::HTTP_FORBIDDEN,
-                'message' => 'You are not authorized to update this post'
+                'message' => 'You are not authorized to update this user'
             ], Response::HTTP_FORBIDDEN);
         }
 

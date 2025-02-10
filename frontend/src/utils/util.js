@@ -10,3 +10,10 @@ export function formatDate(dateString) {
 
   return `${dayName}, ${day}-${month}-${year}`;
 }
+
+export function getCurrentDate() {
+  let newDate = new Date();
+  let date = newDate.toISOString().split("T")[0];
+
+  return date;
+}

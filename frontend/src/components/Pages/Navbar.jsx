@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getUser } from "../services/user.services";
+import { getUser } from "../../services/user.services";
 
 function Navbar() {
   const [user, setUser] = useState("");
